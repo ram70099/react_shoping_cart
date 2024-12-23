@@ -1,0 +1,192 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section */
+.hero-blogs h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.blog-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 15px 15px;
+}
+
+.blog-card .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 15px 15px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.blog-card .btn:hover {
+    background: #ff9800;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-container a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: #fff;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Navbar Dropdown */
+.navbar .nav-links .dropdown {
+    position: relative;
+  }
+  
+  .navbar .nav-links .dropdown .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar .nav-links .dropdown:hover .dropbtn {
+    background-color: gray;
+  }
+  
+  .navbar .nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #131111;
+    min-width: 140px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    
+    /* Adjust the position */
+    top: 100%; /* Position the dropdown just below the button */
+    left: 0;   /* Align the left edge of the dropdown with the button */
+    transform: translateY(8px); /* Optional: fine-tune the position */
+  }
+  
+  .navbar .nav-links .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .navbar .nav-links .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+  }
+  
+  .navbar .nav-links .dropdown-content a:hover {
+    background-color: gray;
+  }
+  
