@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -15,7 +16,7 @@ const ProductDetail = () => {
 
             try {
                 const response = await fetch(url, {
-                    headers: { 'Authorization': `Bearer ${token}`, quantity:quantity },
+                    headers: { 'Authorization': `Bearer ${token}`, quantity: quantity },
                 });
 
                 if (!response.ok) {
@@ -107,22 +108,18 @@ const ProductDetail = () => {
                                     <i className="fa fa-plus"></i>
                                 </button>
                             </div>
-                        </div><br></br>
+                        </div>
+                    </div>
 
+                    {/* Buttons Section */}
+                    <div className="d-flex justify-content-start">
                         {/* Add to Cart Button */}
-                        <form action="/cart/add" method="POST">
-                            <input type="hidden" name="product_id" value={product?.id} />
-                            <input type="hidden" name="quantity" value={quantity} />
-                            <button type="submit" className="btn btn-primary px-3">
-                                <i className="fa fa-shopping-cart mr-1"></i> Add To Cart
-                            </button>
-                        </form>
+                        <Link to={`/cart/${product?.id}`} className="btn btn-success px-3 ml-2 d-flex align-items-center">
+                            <i className="fa fa-shopping-cart mr-1"></i> Add To Cart
+                        </Link>
 
                         {/* Buy Now Button */}
-                        <Link
-                            to={`/order/${product?.id}`}
-                            className="btn btn-primary px-3 ml-2"
-                        >
+                        <Link to={`/order/${product?.id}`} className="btn btn-success px-3 ml-2 d-flex align-items-center">
                             <i className="fas fa-credit-card mr-1"></i> Buy Now
                         </Link>
                     </div>
